@@ -1,9 +1,37 @@
+#name: Spring Boot CI
+#
+#on:
+#  push:
+#    branches:
+#      - "main"
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: temurin
+#          java-version: 17
+#
+#      - name: Build project
+#        run: mvn clean package
 name: Spring Boot CI
 
 on:
   push:
     branches:
-      - "main"
+      - main
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
 
 jobs:
   build:
