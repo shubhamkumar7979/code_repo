@@ -28,7 +28,8 @@ name: Spring Boot CI
 on:
   push:
     branches:
-      - main
+      - shubham_2.0
+#      - main
 
 env:
   DEPENDENCY_GRAPH_ENABLED: false
